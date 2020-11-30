@@ -20,5 +20,10 @@ class Player(pygame.sprite.Sprite):
         key = pygame.key.get_pressed()
         if key[pygame.K_RIGHT]:
            self.rect.centerx += 5
-        if self.rect.right >=SCREEN_WIDTH:
-           self.rect.centerx = SCREEN_WIDTH
+        if self.rect.right >= SCREEN_WIDTH:
+           self.rect.right = SCREEN_WIDTH
+        elif key[pygame.K_LEFT]:
+           self.rect.centerx -= 5
+        if self.rect.left >= SCREEN_WIDTH:
+           self.rect.left = SCREEN_WIDTH
+
